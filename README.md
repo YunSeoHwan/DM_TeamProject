@@ -78,8 +78,9 @@ We used Bayesian optimization from Scikit-learn's optimization tools.
 #### KimJuHyuk: EDA, Preprocessing, Modeling, Interpretation
 #### SongJunhyun : EDA, Preprocessing, Modeling, Interpretation
 #### OhSeungjun : EDA, Preprocessing, Modeling, Interpretation <br>
-## Result & Suggestion
-### Performance of final model according to threshold
+
+# Result & Suggestion
+## Performance of final model according to threshold
 We adjusted the threshold of the final model to fit specific situations. While the default threshold is 0.5, if we aim to predict attrition more conservatively, we could set a lower threshold, like 0.15, to increase recall. Conversely, if we consider the overall prediction performance for attrition, we might adjust the threshold to a level like 0.35. <br><br>
 ![image](https://github.com/YunSeoHwan/DM_TeamProject/assets/48356954/0d563b77-a7e1-471a-a8b5-93239ba08bc6)
 <br><br>
@@ -88,7 +89,7 @@ We applied PCA to the selected features with varying numbers of principal compon
 ![image](https://github.com/YunSeoHwan/DM_TeamProject/assets/48356954/233c60c9-af88-438a-b0c3-4e46af598ded)
 <br><br>
 
-### Analyzing the coefficient of a variable
+## Analyzing the coefficient of a variable
 we examined the coefficients of the final model. The coefficients represent the change in the log-odds for a one-unit increase in the corresponding X variable. For instance, when age increases by one unit, the log-odds of attrition decrease by about -1.
 Intuitively, one might think that lower job intensity or higher wages would reduce the probability of attrition.
 Variables such as OverTime, which indicates the amount of overtime work, and BusinessTravel, which reflects the frequency of business trips, show intuitive results where an increase in these variables leads to higher attrition rates.
@@ -96,7 +97,7 @@ Conversely, wage-related variables like MonthlyIncome and Hourly Rate were elimi
 The coefficients for YearsInCurrentRole, TotalWorkingYears, and JobLevel suggest that an increase in tenure corresponds to a lower probability of attrition. Therefore, it indicates that more attention may be needed in managing newer employees with less tenure to prevent staff turnover. <br><br>
 ![image](https://github.com/YunSeoHwan/DM_TeamProject/assets/48356954/20b8f7cb-a593-412c-93c0-7cd38db29122) <br><br>
 
-### Calculate confidence intervals
+## Calculate confidence intervals
 We aimed to provide insights into what percentage of the total workforce might leave by calculating a confidence interval for the attrition rate. Viewing the training data as a sample drawn from the entire population, we used the attrition rate from the training data as the sample proportion to estimate the interval for the population proportion.
 The results of estimating a 95% confidence interval indicated that the upper limit of the attrition rate was 0.14, and the lower limit was 0.10.
 This means that, based on a 95% confidence interval, we can expect that 10 to 14 out of every 100 employees may leave.<br><br>
